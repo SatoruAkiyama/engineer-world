@@ -1,0 +1,415 @@
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: rgb(255, 251, 251);
+}
+
+img {
+  vertical-align: bottom;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+//btn,
+.btn {
+  text-align: center;
+  & button {
+    background: #000;
+    color: #fff;
+    position: relative;
+    width: 210px;
+    height: 70px;
+    margin: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: #fff;
+      color: #000;
+      border: 1px solid #000;
+    }
+  }
+
+  .material-icons {
+    position: absolute;
+  }
+}
+
+//animation
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translateX(100%);
+}
+
+.slide-enter-to,
+.slide-leave {
+  transform: none;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.5s;
+}
+
+.content-title {
+  color: rgb(87, 85, 179);
+  margin-bottom: 30px;
+}
+
+//common
+.global-container {
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.company,
+.business,
+.people,
+.feature,
+.contact,
+.recruit,
+.production,
+.interview {
+  position: relative;
+  margin: 70px 0;
+
+  &__title {
+    font-size: 25px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & h1,
+    p {
+      position: relative;
+      z-index: 100;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(135, 130, 210, 0.63);
+    }
+  }
+}
+
+.company,
+.recruit {
+  &__img {
+    margin-bottom: 60px;
+  }
+
+  &__info {
+    border-bottom: 1px solid rgb(0, 0, 0);
+
+    & .key {
+      font-size: 20px;
+      font-weight: bold;
+      background: rgb(94, 106, 128);
+      color: #fff;
+    }
+
+    & .value {
+      font-size: 17px;
+      background: #f3f3f3;
+    }
+
+    &__text {
+      padding: 7px;
+    }
+  }
+
+  &__table {
+    border: 1px solid rgb(0, 0, 0);
+  }
+}
+
+//field common
+.preview-field {
+  margin-bottom: 120px;
+}
+
+.field {
+  &__inner {
+    position: relative;
+    margin: 100px 0;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background: rgba(86, 144, 177, 0.562);
+
+    & h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+
+    & img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__text {
+    background: #eae8e8;
+    padding: 10px;
+  }
+
+  &__sub {
+    color: rgb(18, 13, 87);
+    margin-bottom: 20px;
+  }
+
+  &__more {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+//production
+.production {
+  &__title {
+    font-size: 20px;
+  }
+
+  &__content {
+    margin: 100px auto;
+    max-width: 800px;
+  }
+}
+
+//interview
+.interview {
+  &__title {
+    background-image: url("https://cdn.pixabay.com/photo/2017/09/25/11/11/hiring-2784704_1280.png");
+  }
+
+  &__content {
+    background: #eae8e8;
+    padding-bottom: 10px;
+  }
+
+  &__text {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  & .name {
+    text-align: center;
+  }
+
+  h3 {
+    padding: 20px 0 10px 10px;
+    font-size: 25px;
+  }
+
+  p {
+    margin: 20px;
+  }
+}
+
+//recruit
+.recruit__title {
+  background-image: url("https://cdn.pixabay.com/photo/2020/01/21/17/17/hr-process-4783430_1280.png");
+}
+
+.recruit {
+  &__img {
+    margin-bottom: 60px;
+  }
+}
+
+//media
+@media (min-width: 600px) {
+  //commom
+  .company,
+  .business,
+  .people,
+  .feature,
+  .contact,
+  .recruit,
+  .production,
+  .interview {
+    &__title {
+      font-size: 30px;
+      height: 250px;
+    }
+  }
+
+  .company,
+  .recruit {
+    &__info {
+      display: flex;
+      height: 80px;
+
+      & .key {
+        width: 25%;
+        border-right: 3px solid gray;
+        position: relative;
+
+        & span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      & .value {
+        width: 75%;
+      }
+    }
+
+    & p {
+      color: red;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+  }
+
+  //production
+  .preview-field {
+    margin-bottom: 160px;
+  }
+
+  //field common
+  .field__text {
+    padding: 20px;
+  }
+
+  .production__title {
+    font-size: 30px;
+  }
+
+  //btn
+  .business,
+  .recruit {
+    &__fields {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__field {
+      width: 40%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  //common
+  .company,
+  .business,
+  .people,
+  .feature,
+  .contact,
+  .recruit,
+  .production,
+  .interview {
+    &__title {
+      font-size: 35px;
+      height: 400px;
+    }
+  }
+
+  //field common
+  .preview-field {
+    margin-bottom: 200px;
+  }
+
+  .field {
+    &__inner {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__img {
+      width: 50%;
+    }
+
+    &__text {
+      width: 50%;
+    }
+  }
+
+  //production
+  .production__title {
+    font-size: 35px;
+  }
+
+  //btn
+  .business,
+  .recruit {
+    &__fields {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__field {
+      width: 25%;
+      margin-bottom: 0;
+    }
+  }
+}
