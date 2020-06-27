@@ -9,11 +9,7 @@
         <h1 class="content-title">会社概要</h1>
         <div class="company__inner">
           <div class="company__table">
-            <div
-              class="company__info"
-              v-for="(c, index) in company"
-              :key="index"
-            >
+            <div class="company__info" v-for="(c, index) in company" :key="index">
               <div class="key">
                 <div class="company__info__text">
                   <span>{{ c.key }}</span>
@@ -38,9 +34,7 @@
               <ul>
                 <li v-for="(m, index) in mission" :key="index">
                   <h3>{{ m.key }}</h3>
-                  <p>
-                    {{ m.value }}
-                  </p>
+                  <p>{{ m.value }}</p>
                 </li>
               </ul>
               <div class="nostress">
@@ -66,7 +60,7 @@ export default {
   data() {
     return {
       company: [
-        { key: "会社名", value: "Engeneer World" },
+        { key: "会社名", value: "Engineer World" },
         { key: "設立年月日", value: "20××年〇〇月△△日" },
         { key: "代表", value: "一 十一" },
         { key: "資本金", value: "30000000億円" },
